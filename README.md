@@ -42,6 +42,21 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 <TimeAgo time={timestamp} interval={20000} />
 ```
 
+Use the `timeFrom` prop if you would like to display the time difference from a specific time. This uses the moment's from method.
+
+```jsx
+// This would display a moment in relation to a time from the timestamp
+<TimeAgo timeFrom={timestamp} />
+```
+
+Use the `useCalendar` prop if you would like to display the calendar representation of the time. This uses the moment's calendar method.
+
+```jsx
+// This would display the calendar representation of the timestamp.
+<TimeAgo time={timestamp} useCalendar={true} />
+```
+
+
 ## Support local language
 To support local language, you need to require locale language file, and call `moment.locale()` in your app.
 For example
